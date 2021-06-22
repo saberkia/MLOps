@@ -7,17 +7,17 @@ import matplotlib.pyplot as plt
 
 digits = datasets.load_digits()
 print(digits.keys())
-
 # Print the shape of the images and data keys
 print(digits.images.shape)
 print(digits.data.shape)
-
 # Create feature and target arrays
 X = digits.data
 y = digits.target
-
 # Split into training and test set
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state=42, stratify=y)
+X_train, X_test, y_train, y_test = train_test_split(X, y,
+                                                    test_size = 0.2,
+                                                    random_state=42,
+                                                    stratify=y)
 
 # Setup arrays to store train and test accuracies
 neighbors = np.arange(1, 9)
